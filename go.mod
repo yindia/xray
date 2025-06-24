@@ -7,7 +7,7 @@ toolchain go1.22.3
 require (
 	github.com/DATA-DOG/go-sqlmock v1.5.2
 	github.com/denisenkom/go-mssqldb v0.12.3
-	github.com/go-sql-driver/mysql v1.8.1
+	github.com/go-sql-driver/mysql v1.9.3
 	github.com/lib/pq v1.10.9
 	github.com/olekukonko/tablewriter v0.0.5
 	github.com/peterh/liner v1.2.2
