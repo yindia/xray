@@ -72,17 +72,17 @@ brews:
     # Github repository to push the tap to.
     repository:
       owner: yindia
-      name: homebrew-tap
+      name: xray
 
     # Git author used to commit to the repository.
     # Defaults are shown.
     commit_author:
-      name: TQ
-      email: founder@datasherlock.io
+      name: Yuvraj
+      email: evalsocket@gmail.com
 
     # Your app's homepage.
     # Default is empty.
-    homepage: "https://thesaas.company"
+    homepage: "https://evalsocket.dev"
 
     # Your app's description.
     # Default is empty.
