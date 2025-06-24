@@ -1,57 +1,136 @@
 # XRay
 
-XRay is a open source library for database schema extraction and query execution.
+**XRay** is an open-source Go library and CLI tool for database schema extraction and query execution. It supports multiple databases and provides a unified interface for developers and data engineers.
 
-## Install 
+---
+
+## Features
+
+- Extracts schema metadata from popular databases.
+- Executes SQL queries across different engines.
+- Unified API for multiple backends.
+- Easy integration into Go projects.
+- CLI for quick inspection and automation.
+
+---
+
+## Installation
+
+### Library
 
 ```bash
 go get github.com/yindia/xray@latest
 ```
 
-## Docs
-
-- Official documentation : [Go Docs](https://pkg.go.dev/github.com/yindia/xray)
-- Database integrations : 
-    - [MySQL](./example/mysql/integration.md)
-    - [Postgres](./example/postgres/integration.md)
-    - [redshift](./example/redshift/integration.md)
-    - [BigQuery](./example/bigquery/integration.md)
-    - [snowflake](./example/snowflake/integration.md)
-    - [mssql](./example/mssql/integration.md)
-- Database Example : 
-    - [MySQL](./example/mysql/README.md)
-    - [Postgres](./example/postgres/README.md)
-    - [redshift](./example/redshift/README.md)
-    - [BigQuery](./example/bigquery/README.md)
-    - [snowflake](./example/snowflake/README.md)
-    - [mssql](./example/mssql/README.md)
-- CLI Docs : [Getting started](./cli/README.md)
-
-### Install xRay cli
-
-
-#### Linux
-```
-curl -sL https://raw.githubusercontent.com/yindia/xray/main/install.sh |  sudo bash -s -- -b /usr/local/bin
-```
-
+### CLI
 
 #### MacOS
+
+```bash
+brew install yindia/homebrew-tap/xray
 ```
-brew install yindia//homebrew-tap/xray
+
+#### Linux
+
+```bash
+curl -sL https://raw.githubusercontent.com/yindia/xray/main/install.sh | sudo bash -s -- -b /usr/local/bin
 ```
 
-### Supported Databases
-![logo-mysql-170x115](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/c63db1bf-5efe-4e44-a9fe-14862d467768) 
-![google_bigquery_logo_icon_168151](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/bbadd8de-761b-42c8-87a3-5038babf4ff9)    ![postgresql_plain_wordmark_logo_icon_146390](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/7e663b9a-7739-4827-a2ef-701a6da0a7a1)  ![snowflake_logo_icon_168808 (2)](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/5de6578e-8fca-4f29-823a-1b97fb69942e) 
- ![1669818522440](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/101e1270-df24-45b2-907a-92cc85bf65bc)
-![5968364](https://github.com/Adarsh-jaiss/xray-library/assets/96974600/acae42cc-7da4-4b79-8aa7-c8d9547712dc)
+---
 
+## Quick Start
 
+### Go Library Example
 
-## Show Your Support!
+```go
+package main
 
-If you find XRay useful, please consider starring the repository on GitHub to show your support:
+import (
+    "github.com/yindia/xray"
+    "github.com/yindia/xray/config"
+)
+
+func main() {
+    cfg := config.Config{
+        // Fill in your database config here
+    }
+    client, err := xray.NewClient(cfg)
+    if err != nil {
+        panic(err)
+    }
+
+    schema, err := client.ExtractSchema()
+    if err != nil {
+        panic(err)
+    }
+
+    // Use schema metadata
+    fmt.Println(schema)
+}
+```
+
+See [example/{database}/main.go](./example/) for full working examples for each supported database.
+
+---
+
+## Supported Databases
+
+- MySQL
+- PostgreSQL
+- Redshift
+- BigQuery
+- Snowflake
+- MSSQL
+
+---
+
+## Integration Guides
+
+- [MySQL Integration](./example/mysql/integration.md)
+- [Postgres Integration](./example/postgres/integration.md)
+- [Redshift Integration](./example/redshift/integration.md)
+- [BigQuery Integration](./example/bigquery/integration.md)
+- [Snowflake Integration](./example/snowflake/integration.md)
+- [MSSQL Integration](./example/mssql/integration.md)
+
+## Example Projects
+
+- [MySQL Example](./example/mysql/README.md)
+- [Postgres Example](./example/postgres/README.md)
+- [Redshift Example](./example/redshift/README.md)
+- [BigQuery Example](./example/bigquery/README.md)
+- [Snowflake Example](./example/snowflake/README.md)
+- [MSSQL Example](./example/mssql/README.md)
+
+---
+
+## CLI Usage
+
+See [CLI Getting Started](./cli/README.md) for full documentation.
+
+---
+
+## Documentation
+
+- [GoDoc Reference](https://pkg.go.dev/github.com/yindia/xray)
+
+---
+
+## Contributing
+
+Contributions are welcome! Please open issues or pull requests.
+
+---
+
+## License
+
+[MIT](./LICENSE)
+
+---
+
+## Show Your Support
+
+If you find XRay useful, please consider starring the repository on GitHub!
 
 
 

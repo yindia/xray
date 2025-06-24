@@ -33,7 +33,7 @@ jobs:
           go get -u github.com/mattn/goveralls
 
       - name: Run GolangCI-Lint Action by building from repository
-        uses: golangci/golangci-lint-action@v3
+        uses: golangci/golangci-lint-action@latest
         with:
           args: --timeout=30m
         env:
