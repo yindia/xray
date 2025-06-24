@@ -13,7 +13,7 @@ require (
 	github.com/peterh/liner v1.2.2
 	github.com/sirupsen/logrus v1.9.3
 	github.com/snowflakedb/gosnowflake v1.10.0
-	github.com/spf13/cobra v1.8.0
+	github.com/spf13/cobra v1.9.1
 	gopkg.in/yaml.v3 v3.0.1
 	gorm.io/driver/bigquery v1.2.0
 )
@@ -75,7 +75,7 @@ require (
 	github.com/pierrec/lz4/v4 v4.1.18 // indirect
 	github.com/pkg/browser v0.0.0-20210911075715-681adbf594b8 // indirect
 	github.com/rivo/uniseg v0.4.7 // indirect
-	github.com/spf13/pflag v1.0.5 // indirect
+	github.com/spf13/pflag v1.0.6 // indirect
 	github.com/stretchr/objx v0.5.2 // indirect
 	github.com/zeebo/xxh3 v1.0.2 // indirect
 	go.opencensus.io v0.24.0 // indirect
