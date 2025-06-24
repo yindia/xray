@@ -141,7 +141,6 @@ var shellCmd = &cobra.Command{
 			}
 		} else {
 			line := liner.NewLiner()
-			defer line.Close()
 
 			for {
 				line.SetCtrlCAborts(true)
